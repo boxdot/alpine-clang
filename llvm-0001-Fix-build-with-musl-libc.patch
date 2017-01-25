@@ -1,0 +1,20 @@
+diff --git a/include/llvm/Analysis/TargetLibraryInfo.h b/include/llvm/Analysis/TargetLibraryInfo.h
+index 7efa6f05..5b408679 100644
+--- a/include/llvm/Analysis/TargetLibraryInfo.h
++++ b/include/llvm/Analysis/TargetLibraryInfo.h
+@@ -21,6 +21,15 @@
+ namespace llvm {
+ template <typename T> class ArrayRef;
+ 
++#undef fopen64
++#undef fseeko64
++#undef fstat64
++#undef fstatvfs64
++#undef ftello64
++#undef lstat64
++#undef stat64
++#undef tmpfile64
++
+ /// Describes a possible vectorization of a function.
+ /// Function 'VectorFnName' is equivalent to 'ScalarFnName' vectorized
+ /// by a factor 'VectorizationFactor'.
